@@ -11,7 +11,6 @@ const int SCREEN_HEIGHT = 600;
 
 int startGame(const int &debug)
 {
-    initwindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Bataille Navale");
     
     return 0;
 }

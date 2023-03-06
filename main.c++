@@ -9,26 +9,30 @@ using namespace std;
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
+const int REFRESH_DELAY = 200;
+const bool DEBUG = true;
 
-int startGame(const int &debug)
+void verbose(const string &message, const bool &verbose)
 {
-    initwindow(400, 300, "Test");
-    circle(100, 50, 40);
+    if (verbose){
+        cout << message << endl;
+    }
+}
+
+int startGame()
+{
+    initwindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Test");
+    verbose("Window initialized", DEBUG);
     while (!kbhit())
     {
-        delay(200);
+        delay(REFRESH_DELAY);
     }
+    verbose("Game ended", DEBUG);
     return 0;
 }
 
 int main()
 {
-    bool debug = true;
-    if (debug)
-    {
-        cout << "Debug mode" << endl;
-        cout << "----------------" << endl;
-    }
-    startGame(debug);
+    startGame();
     return 0;
 }

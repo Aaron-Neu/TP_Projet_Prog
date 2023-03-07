@@ -21,14 +21,7 @@ void verbose(const string &message, const bool &verbose)
 
 int startGame()
 {
-    initwindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Test");
-    verbose("Window initialized", DEBUG);
-    while (!kbhit())
-    {
-        delay(REFRESH_DELAY);
-    }
-    verbose("Game ended", DEBUG);
-    return 0;
+    
 }
 
 int main()

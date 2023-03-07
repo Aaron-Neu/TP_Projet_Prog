@@ -2,7 +2,7 @@
 #include <string>
 #include <array>
 #include "lib/graphics.h"
-#include "lib/winbgim.h"
+#include "lib/winbgi.cpp"
 #include "src/game.h"
 
 using namespace std;

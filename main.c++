@@ -3,7 +3,6 @@
 #include <array>
 #include "lib/graphics.h"
 #include "lib/winbgi.cpp"
-#include "src/game.h"
 
 using namespace std;
 
@@ -14,14 +13,22 @@ const bool DEBUG = true;
 
 void verbose(const string &message, const bool &verbose)
 {
-    if (verbose){
+    if (verbose)
+    {
         cout << message << endl;
     }
 }
 
+void createButton(int x, int y, int size_x, int size_y, string label = "")
+{
+    rectangle(x,y,size_x,size_y);
+    
+}
+
 int startGame()
 {
-    
+    initgraphsize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
 }
 
 int main()

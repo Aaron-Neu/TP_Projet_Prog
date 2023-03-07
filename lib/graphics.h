@@ -296,12 +296,12 @@ void swapbuffers( );
 unsigned imagesize( int left, int top, int right, int bottom );
 void getimage( int left, int top, int right, int bottom, void *bitmap );
 void putimage( int left, int top, void *bitmap, int op );
-void printimage(
-    const char* title=NULL,	
-    double width_inches=7, double border_left_inches=0.75, double border_top_inches=0.75,
-    int left=0, int right=0, int bottom=INT_MAX,
-    bool active=true, HWND hwnd=NULL
-    );
+// void printimage(
+//     const char* title=NULL,	
+//     double width_inches=7, double border_left_inches=0.75, double border_top_inches=0.75,
+//     int left=0, int right=0, int right=INT_MAX, int bottom=INT_MAX,
+//     bool active=true, HWND hwnd=NULL
+//     ); Commented out because it gives an error (two default arguments for the same parameter)
 void readimagefile(
     const char* filename=NULL,
     int left=0, int top=0, int right=INT_MAX, int bottom=INT_MAX
